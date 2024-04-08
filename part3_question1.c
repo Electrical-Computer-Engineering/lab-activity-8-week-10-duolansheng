@@ -4,14 +4,17 @@
 #include "string.h"
 
 void shift_first(char *str) {
-    int length = strlen(str);
+    int str_length = 0;
 
-    while(length > 0) {
-        int i = length;
-        str[i] = str[i + 1];
-        i--;
-        length--;
+    while(str[str_length] != '\0') {
+        str_length++;
     }
+
+    for(int i = 0; i < str_length; i++){
+        str[i] = str[i + 1];
+    }
+
+    str[str_length - 1] = '\0';
 }
 
 int main() {
@@ -20,9 +23,10 @@ int main() {
     printf("Enter a string: ");
     scanf("%s", str);
 
-    for(int i = 0; i < strlen(str); i++) {
-        shift_first(str);
+    while(strlen(str) >= 1){
         printf("%s\n", str);
+        shift_first(str);
     }
+
     return 0;
 }

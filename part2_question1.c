@@ -143,7 +143,7 @@ int main () {
     scanf("%s", str2);
     getchar();
 
-    int t =  my_strncmp(str1, str2, n);
+    t =  my_strncmp(str1, str2, n);
 
     if(t == 0) {
         printf("The two strings are equal for the first n characters.\n");
@@ -174,17 +174,17 @@ int main () {
     //Part2 Q3
     char src[MAX], dest[MAX];
 
-    printf("Enter string1: ");
+    printf("Enter string1 to copy: ");
     scanf("%s", src);
     getchar();
 
-    printf("My copy: %s", my_strcpy(dest, src));
+    printf("My copy: %s\n", my_strcpy(dest, src));
 
-    printf("Enter string2: ");
+    printf("Enter string2 to copy: ");
     scanf("%s", src);
     getchar();
 
-    printf("My copy: %s", my_strcpy(dest, src));
+    printf("My copy: %s\n", my_strcpy(dest, src));
 
 
     //part2 Q4

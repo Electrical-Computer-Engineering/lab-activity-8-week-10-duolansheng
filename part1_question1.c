@@ -26,7 +26,7 @@ int my_is_upper(char c) {
     }
 }
 
-int my_to_upper(char c) {
+char my_to_upper(char c) {
     if(c >= 'a' && c <= 'z') {
         return c - 'a' + 'A';
     } else {
@@ -34,7 +34,7 @@ int my_to_upper(char c) {
     }
 }
 
-int my_to_lower(char c){
+char my_to_lower(char c){
     if(c >= 'A' && c <= 'Z') {
         return c - 'A' +'a';
     } else {
@@ -45,100 +45,112 @@ int my_to_lower(char c){
 int main() {
     char c1, c2;
 
-    printf("Enter a character1: ");
-    scanf("%c", &c1);
-    getchar();
+    {//part1 Q1
+        printf("Enter a character1: ");
+        scanf("%c", &c1);
+        getchar();
 
-    printf("Enter a character2: ");
-    scanf("%c", &c2);
-    getchar();
+        printf("Enter a character2: ");
+        scanf("%c", &c2);
+        getchar();
 
-    int t = my_isalpha(c1);
-    int p = my_isalpha(c2);
+        int t = my_isalpha(c1);
+        int p = my_isalpha(c2);
 
-    if(t == 1) {
-        printf("%c is a alpha.\n", c1);
-    } else {
-        printf("%c is not a alpha.\n", c1);
+        if (t == 1) {
+            printf("%c is a alpha.\n", c1);
+        } else {
+            printf("%c is not a alpha.\n", c1);
+        }
+
+        if (p == 1) {
+            printf("%c is a alpha.\n", c2);
+        } else {
+            printf("%c is not a alpha.\n", c2);
+        }
     }
 
-    if(p == 1) {
-        printf("%c is a alpha.\n", c2);
-    } else {
-        printf("%c is not a alpha.\n", c2);
+    {//part1 Q2
+        printf("Enter a character1: ");
+        scanf("%c", &c1);
+        getchar();
+
+        printf("Enter a character2: ");
+        scanf("%c", &c2);
+        getchar();
+
+        int t = my_isdigit(c1);
+        int p = my_isdigit(c2);
+
+        if (t == 1) {
+            printf("%c is a digit.\n", c1);
+        } else {
+            printf("%c is not a digit.\n", c1);
+        }
+
+        if (p == 1) {
+            printf("%c is a digit.\n", c2);
+        } else {
+            printf("%c is not a digit.\n", c2);
+        }
     }
 
-    printf("Enter a character1: ");
-    scanf("%c", &c1);
-    getchar();
+    {//part1 Q3
+        printf("Enter a character1: ");
+        scanf("%c", &c1);
+        getchar();
 
-    printf("Enter a character2: ");
-    scanf("%c", &c2);
-    getchar();
+        printf("Enter a character2: ");
+        scanf("%c", &c2);
+        getchar();
 
-    t = my_isdigit(c1);
-    p = my_isdigit(c2);
+        int t = my_is_upper(c1);
+        int p = my_is_upper(c2);
 
-    if(t == 1) {
-        printf("%c is a digit.\n", c1);
-    } else {
-        printf("%c is not a digit.\n", c1);
+        if (t == 1) {
+            printf("%c is a upper-case letter.\n", c1);
+        } else {
+            printf("%c is not a upper-case letter.\n", c1);
+        }
+
+        if (p == 1) {
+            printf("%c is a upper-case letter.\n", c2);
+        } else {
+            printf("%c is not a upper-case letter.\n", c2);
+        }
     }
 
-    if(p == 1) {
-        printf("%c is a digit.\n", c2);
-    } else {
-        printf("%c is not a digit.\n", c2);
+    {//part1 Q4
+        printf("Enter a character1: ");
+        scanf("%c", &c1);
+        getchar();
+
+        printf("Enter a character2: ");
+        scanf("%c", &c2);
+        getchar();
+
+        char t = my_to_upper(c1);
+        char p = my_to_upper(c2);
+
+        printf("%c\n", t);
+        printf("%c\n", p);
     }
 
-    printf("Enter a character1: ");
-    scanf("%c", &c1);
-    getchar();
+    {//part1 Q5
+        printf("Enter a character1: ");
+        scanf("%c", &c1);
+        getchar();
 
-    printf("Enter a character2: ");
-    scanf("%c", &c2);
-    getchar();
+        printf("Enter a character2: ");
+        scanf("%c", &c2);
+        getchar();
 
-    t = my_is_upper(c1);
-    p = my_is_upper(c2);
+        char t = my_to_lower(c1);
+        char p = my_to_lower(c2);
 
-    if(t == 1) {
-        printf("%c is a upper-case letter.\n", c1);
-    } else {
-        printf("%c is not a upper-case letter.\n", c1);
+        printf("%c\n", t);
+        printf("%c\n", p);
     }
 
-    if(p == 1) {
-        printf("%c is a upper-case letter.\n", c2);
-    } else {
-        printf("%c is not a upper-case letter.\n", c2);
-    }
-
-    printf("Enter a character1: ");
-    scanf("%c", &c1);
-    getchar();
-
-    printf("Enter a character2: ");
-    scanf("%c", &c2);
-    getchar();
-
-    char m = my_to_upper(c1);
-    char n = my_to_upper(c2);
-
-    printf("%c\n", m);
-    printf("%c\n", n);
-
-    printf("Enter a character1: ");
-    scanf("%c", &c1);
-    getchar();
-
-    printf("Enter a character2: ");
-    scanf("%c", &c2);
-    getchar();
-
-    m = my_to_lower(c1);
-    n = my_to_lower(c2);
-
-    printf("%c\n", m);
-    printf("%c\n", n);
+    return 0;
 }
